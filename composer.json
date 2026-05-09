@@ -1,0 +1,8 @@
+{
+    "name": "quickpos/quickpos",
+    "description": "A simple POS system",
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.0"
+    }
+}
