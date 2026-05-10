@@ -214,6 +214,39 @@
                 </div>
             </div>
         </div>
+
+            <!-- SCRUM-50 & 51: Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Loved By Many</span>
+                <h2>What Our Guests Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"The most peaceful café experience in London. The quiet atmosphere and warm lighting make it perfect for reading."</p>
+                    <div class="testimonial-author">
+                        <strong>Emma Clarke</strong>
+                        <span>Regular Guest</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Finally found a place where I can work without distractions. Their midnight mocha is absolutely divine!"</p>
+                    <div class="testimonial-author">
+                        <strong>David Chen</strong>
+                        <span>Freelance Writer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The jazz nights here are magical. Feels like stepping into a different era. Highly recommended."</p>
+                    <div class="testimonial-author">
+                        <strong>Sophia Williams</strong>
+                        <span>Jazz Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     </section>
     </section>
