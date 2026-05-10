@@ -15,8 +15,9 @@ if (empty($name)) {
     $errors['name'] = "Name is required";
 }
 
-// SCRUM-41 Added & 42: Validate email
-if (empty($email)) {
+// SCRUM-41 Added & 42: Validate email Added email format validation
+if (empty($email)) 
+    {
     $errors['email'] = "Email is required";
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = "Invalid email format";
