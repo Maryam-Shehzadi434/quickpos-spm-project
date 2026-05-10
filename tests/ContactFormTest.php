@@ -71,3 +71,22 @@ class ContactFormTest extends TestCase
         // Assert: This will fail initially because validation not implemented
         $this->assertArrayHasKey('email', $errors, 'Email validation should catch invalid format');
     }
+
+        /**
+     * SCRUM-59: Skeleton test for empty date
+     * This test will FAIL initially (TDD approach)
+     */
+    public function testEmptyDateField()
+    {
+        $_POST = [
+            'name' => 'John Doe',
+            'email' => 'test@example.com',
+            'date' => '',
+            'guests' => '2'
+        ];
+        
+        $errors = $this->validateForm($_POST);
+        
+        // Assert: This will fail initially because validation not implemented
+        $this->assertArrayHasKey('date', $errors, 'Date validation should catch empty field');
+    }
