@@ -160,6 +160,61 @@
                 </div>
             </div>
         </div>
+
+            <!-- SCRUM-35 & 36: Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Moments</span>
+                <h2>Visual Poetry</h2>
+                <p>Glimpses into our world</p>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-large">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Main Hall">
+                <div class="image-overlay">
+                    <span>Main Hall</span>
+                    <small>Cozy Ambiance</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400" alt="Coffee Bar">
+                <div class="image-overlay">
+                    <span>Coffee Bar</span>
+                    <small>Artisan Craft</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Jazz Night">
+                <div class="image-overlay">
+                    <span>Jazz Night</span>
+                    <small>Live Music</small>
+                </div>
+            </div>
+            <div class="gallery-item gallery-tall">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400" alt="Art Corner">
+                <div class="image-overlay">
+                    <span>Art Corner</span>
+                    <small>Local Artists</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400" alt="Window View">
+                <div class="image-overlay">
+                    <span>Rainy Window</span>
+                    <small>London Evenings</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1486499043531-fec0b3767eef?w=400" alt="Quiet Moments">
+                <div class="image-overlay">
+                    <span>Quiet Moments</span>
+                    <small>Peaceful Sips</small>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     </section>
     </section>
