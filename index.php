@@ -258,6 +258,10 @@
     <!-- [SCRUM-18] Add navigation links to header Requirment Satisfied -->
     <!-- [SCRUM-19] Add Reserve Table button to header Requirment Satisfied -->
     <!-- [SCRUM-33] Add menu items with images and prices Requirment Satisfied -->
+    <!-- [SCRUM-34] Add hover effects to menu items Requirment Satisfied -->
+    <!-- [SCRUM-35] Add gallery grid layout Requirment Satisfied -->
+    <!-- [SCRUM-36] Add enhanced gallery hover effects Requirment Satisfied -->
+    <!-- [SCRUM-50] Add testimonials section Requirment Satisfied -->
 
 </body>
 </html>
