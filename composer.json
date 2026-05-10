@@ -1,0 +1,16 @@
+{
+    "name": "astercafe/landing-page",
+    "description": "Aster Café Landing Page with CI/CD Pipeline",
+    "type": "project",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox",
+        "analyse": "vendor/bin/phpstan analyse --level=5"
+    }
+}
