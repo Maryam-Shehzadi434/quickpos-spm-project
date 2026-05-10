@@ -46,6 +46,28 @@
             <span>Scroll</span>
             <div class="scroll-line"></div>
         </div>
+
+            <!-- SCRUM-27: About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Cozy Café Interior">
+                    <div class="image-frame"></div>
+                    <div class="image-caption">
+                        <span>Sanctuary in the City</span>
+                        <small>Where every corner tells a story</small>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>An Escape From the Noise</h2>
+                    <p>Aster Café was created as a sanctuary for meaningful conversations, slow evenings, and handcrafted coffee experiences in the heart of London.</p>
+                    <p>Tucked away on Kensington Lane, our doors open to those seeking refuge from the chaotic city pace. Here, every cup tells a story, every corner holds a secret, and every evening unfolds like poetry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     </header>
 
