@@ -32,5 +32,8 @@
     </header>
 
     <!-- Rest of the content will be added in other tasks -->
+    <!-- [SCRUM-18] Add navigation links to header Requirment Satisfied -->
+    <!--  -->
+
 </body>
 </html>
