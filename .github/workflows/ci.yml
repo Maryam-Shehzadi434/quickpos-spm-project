@@ -1,0 +1,103 @@
+# CI Pipeline for QuickPOS Project
+# Triggers on pushes to main, feature branches, and pull requests
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, feature/*, bugfix/*, SCRUM-* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Job 1: Validate commit messages contain Jira ID (e.g., [SCRUM-123])
+  validate-commits:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Required to access commit history
+    
+    - name: Check commit messages for Jira ID
+      run: |
+        COMMITS=$(git log --format='%s' origin/main..HEAD 2>/dev/null || git log --format='%s' HEAD~5..HEAD)
+        FAILED=0
+        while IFS= read -r commit; do
+          if [[ ! "$commit" =~ ^\[SCRUM-[0-9]+\] ]]; then
+            echo "FAILED: Missing Jira ID in commit: $commit"
+            FAILED=1
+          else
+            echo "Valid: $commit"
+          fi
+        done <<< "$COMMITS"
+        if [ $FAILED -eq 1 ]; then
+          exit 1
+        fi
+
+  # Job 2: Static code analysis using PHPStan
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+    
+    - name: Install Composer
+      run: composer install --no-progress --no-interaction
+    
+    - name: PHPStan Analysis
+      run: vendor/bin/phpstan analyse tests/ --level=5
+
+  # Job 3: Run automated PHPUnit tests
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+    
+    - name: Install Composer
+      run: composer install --no-progress --no-interaction
+    
+    - name: Run PHPUnit Tests
+      run: vendor/bin/phpunit --testdox
+
+  # Job 4: Verify all PHP files have valid syntax
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check PHP Syntax
+      run: find . -name "*.php" -not -path "./vendor/*" -exec php -l {} \;
+
+  # Job 5: Final validation - blocks PR if any previous job failed
+  pr-validation:
+    runs-on: ubuntu-latest
+    needs: [validate-commits, code-quality, tests, syntax-check]
+    if: always()  # Runs even if some jobs fail, to report final status
+    
+    steps:
+    - name: Check All Statuses
+      run: |
+        if [ "${{ needs.validate-commits.result }}" != "success" ]; then
+          echo "Commit validation failed"
+          exit 1
+        fi
+        if [ "${{ needs.code-quality.result }}" != "success" ]; then
+          echo "Code quality check failed"
+          exit 1
+        fi
+        if [ "${{ needs.tests.result }}" != "success" ]; then
+          echo "PHPUnit tests failed"
+          exit 1
+        fi
+        if [ "${{ needs.syntax-check.result }}" != "success" ]; then
+          echo "Syntax check failed"
+          exit 1
+        fi
