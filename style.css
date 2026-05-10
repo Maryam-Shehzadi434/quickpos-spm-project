@@ -693,3 +693,115 @@ footer {
         font-size: 10px;
     }
 }
+/* SCRUM-38: Reservation Form Styling */
+.reservation {
+    padding: 100px 0;
+    background: #1a1a1a;
+}
+
+.reservation-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: rgba(59, 42, 36, 0.2);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(214, 185, 140, 0.2);
+}
+
+.reservation-content {
+    padding: 50px;
+}
+
+.reservation-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+}
+
+.reservation-content p {
+    color: #B8B8B8;
+    margin-bottom: 30px;
+}
+
+.reservation-image {
+    height: 100%;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.reservation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #D6B98C;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: #2a2a2a;
+    border: 1px solid rgba(214, 185, 140, 0.3);
+    border-radius: 8px;
+    color: #F5EBDD;
+    font-family: 'Poppins', sans-serif;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+    outline: none;
+    border-color: #D6B98C;
+}
+
+.reservation-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #D6B98C;
+    color: #111111;
+    border: none;
+    padding: 14px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #c4a67a;
+    transform: translateY(-2px);
+}
+
+.error-messages {
+    background: rgba(220, 53, 69, 0.2);
+    border: 1px solid #dc3545;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
