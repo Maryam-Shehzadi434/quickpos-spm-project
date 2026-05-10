@@ -24,7 +24,7 @@ if (empty($email))
     $errors['email'] = "Invalid email format";
 }
 
-// SCRUM-43: Validate date
+// SCRUM-43: Validate date Added
 if (empty($date)) {
     $errors['date'] = "Reservation date is required";
 }
