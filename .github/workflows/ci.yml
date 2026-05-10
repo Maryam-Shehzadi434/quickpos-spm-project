@@ -65,7 +65,8 @@ jobs:
     needs: [validate-commits, tests, syntax-check]
     if: always()
     steps:
-    - run: |
+    - name: Check all statuses
+      run: |
         if [ "${{ needs.validate-commits.result }}" != "success" ]; then
           echo "validate-commits failed"
           exit 1
@@ -78,3 +79,4 @@ jobs:
           echo "syntax-check failed"
           exit 1
         fi
+        echo "All checks passed"
