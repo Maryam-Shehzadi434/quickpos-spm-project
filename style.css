@@ -94,3 +94,42 @@ header.scrolled {
     max-width: 800px;
     padding: 0 20px;
 }
+/* SCRUM-25: CTA Buttons Styling */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #D6B98C;
+    color: #111111;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #c4a67a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(214, 185, 140, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #F5EBDD;
+    border: 1px solid #D6B98C;
+}
+
+.btn-secondary:hover {
+    background: rgba(214, 185, 140, 0.1);
+    transform: translateY(-2px);
+}
