@@ -82,6 +82,34 @@
                             <span>Live Jazz</span>
                         </div>
                     </div>
+
+                        <!-- SCRUM-30: Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Experience</span>
+                <h2>More Than Just Coffee</h2>
+                <p>Step into a world where every detail is crafted for your comfort</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">☕</div>
+                    <h3>Quiet Atmosphere</h3>
+                    <p>Soft jazz, warm lights, peaceful evenings away from the city rush.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍵</div>
+                    <h3>Artisan Coffee</h3>
+                    <p>Freshly roasted blends crafted with precision by master baristas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Reading Corners</h3>
+                    <p>Private spaces for books, work, and quiet reflection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     </section>
     </header>

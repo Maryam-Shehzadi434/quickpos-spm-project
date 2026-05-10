@@ -277,3 +277,72 @@ header.scrolled {
 .about-feature:hover span:first-child {
     transform: scale(1.1);
 }
+
+/* SCRUM-30: Features Grid */
+.experience {
+    padding: 100px 0;
+    background: #111111;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #D6B98C;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.section-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background: #D6B98C;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(59, 42, 36, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(214, 185, 140, 0.1);
+    transition: all 0.3s;
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+}
+
+.feature-card p {
+    color: #B8B8B8;
+}
