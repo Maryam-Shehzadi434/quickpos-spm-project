@@ -109,6 +109,113 @@
                 </div>
             </div>
         </div>
+            <!-- SCRUM-32 & 33: Signature Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Signature Menu</span>
+                <h2>Handcrafted for You</h2>
+                <p>Our most beloved creations</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Midnight Mocha">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Midnight Mocha</h4>
+                        <p>Dark chocolate, espresso, steamed milk</p>
+                        <span class="price">£8</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400" alt="Vanilla Latte">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Vanilla Latte</h4>
+                        <p>Madagascar vanilla, smooth espresso</p>
+                        <span class="price">£7</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Caramel Espresso">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Caramel Espresso</h4>
+                        <p>House-made caramel, double shot</p>
+                        <span class="price">£6</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=400" alt="Cinnamon Cheesecake">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Cinnamon Cheesecake</h4>
+                        <p>New York style with cinnamon dust</p>
+                        <span class="price">£10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- SCRUM-35 & 36: Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Moments</span>
+                <h2>Visual Poetry</h2>
+                <p>Glimpses into our world</p>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-large">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Main Hall">
+                <div class="image-overlay">
+                    <span>Main Hall</span>
+                    <small>Cozy Ambiance</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400" alt="Coffee Bar">
+                <div class="image-overlay">
+                    <span>Coffee Bar</span>
+                    <small>Artisan Craft</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Jazz Night">
+                <div class="image-overlay">
+                    <span>Jazz Night</span>
+                    <small>Live Music</small>
+                </div>
+            </div>
+            <div class="gallery-item gallery-tall">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400" alt="Art Corner">
+                <div class="image-overlay">
+                    <span>Art Corner</span>
+                    <small>Local Artists</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400" alt="Window View">
+                <div class="image-overlay">
+                    <span>Rainy Window</span>
+                    <small>London Evenings</small>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1486499043531-fec0b3767eef?w=400" alt="Quiet Moments">
+                <div class="image-overlay">
+                    <span>Quiet Moments</span>
+                    <small>Peaceful Sips</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
     </section>
     </section>
     </section>
@@ -117,6 +224,7 @@
     <!-- Rest of the content will be added in other tasks -->
     <!-- [SCRUM-18] Add navigation links to header Requirment Satisfied -->
     <!-- [SCRUM-19] Add Reserve Table button to header Requirment Satisfied -->
+    <!-- [SCRUM-33] Add menu items with images and prices Requirment Satisfied -->
 
 </body>
 </html>
