@@ -1,38 +1,77 @@
-/* SCRUM-20: Mobile Hamburger Menu */
-.mobile-menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+/* ========================================
+   RESET & BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111111;
+    color: #F5EBDD;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1, h2, h3, h4, .logo-text, .hero-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #D6B98C;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.section-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background: #D6B98C;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
     color: #F5EBDD;
 }
 
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    nav {
-        display: none;
-    }
-    
-    nav.active {
-        display: block;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #111111;
-        padding: 20px;
-        border-bottom: 1px solid #D6B98C;
-    }
-    
-    nav.active ul {
-        flex-direction: column;
-        gap: 15px;
-    }
+.section-header p {
+    color: #B8B8B8;
 }
 
-/* SCRUM-21: Sticky Header */
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
 header {
     position: fixed;
     top: 0;
@@ -49,7 +88,76 @@ header.scrolled {
     padding: 12px 0;
     border-bottom: 1px solid rgba(214, 185, 140, 0.2);
 }
-/* SCRUM-23: Hero Background with Slow Zoom */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F5EBDD;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul a {
+    color: #F5EBDD;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+nav ul a:hover {
+    color: #D6B98C;
+}
+
+.btn-reserve-header {
+    background: #D6B98C;
+    color: #111111;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.btn-reserve-header:hover {
+    background: #c4a67a;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #F5EBDD;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
     height: 100vh;
     position: relative;
@@ -77,7 +185,7 @@ header.scrolled {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
 }
-/* SCRUM-24: Dark Overlay for Readability */
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -85,7 +193,6 @@ header.scrolled {
     width: 100%;
     height: 100%;
     background: rgba(17, 17, 17, 0.6);
-    z-index: 1;
 }
 
 .hero-content {
@@ -93,13 +200,52 @@ header.scrolled {
     z-index: 2;
     max-width: 800px;
     padding: 0 20px;
+    animation: fadeInUp 1.2s ease-out;
 }
-/* SCRUM-25: CTA Buttons Styling */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-subtitle {
+    color: #D6B98C;
+    letter-spacing: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 800;
+    margin: 20px 0;
+    letter-spacing: 8px;
+    color: #F5EBDD;
+}
+
+.hero-tagline {
+    font-size: 24px;
+    font-style: italic;
+    color: #D6B98C;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #F5EBDD;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
 .hero-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 30px;
 }
 
 .btn-primary, .btn-secondary {
@@ -133,7 +279,7 @@ header.scrolled {
     background: rgba(214, 185, 140, 0.1);
     transform: translateY(-2px);
 }
-/* SCRUM-26: Scroll Down Indicator */
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -161,7 +307,41 @@ header.scrolled {
     0%, 100% { height: 40px; opacity: 0.5; }
     50% { height: 60px; opacity: 1; }
 }
-/* SCRUM-28: About Image with Hover Effects */
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.about {
+    padding: 100px 0;
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(214, 185, 140, 0.03) 0%, transparent 70%);
+    animation: rotateBackground 30s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
 .about-image {
     position: relative;
     width: 100%;
@@ -171,6 +351,8 @@ header.scrolled {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    opacity: 0;
+    animation: slideInLeft 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
 }
 
 .about-image:hover {
@@ -182,11 +364,50 @@ header.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.95) saturate(1.05);
 }
 
 .about-image:hover img {
     transform: scale(1.1);
+    filter: brightness(1.08) saturate(1.15);
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(214, 185, 140, 0) 0%, rgba(214, 185, 140, 0.1) 50%, rgba(214, 185, 140, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-image:hover::before {
+    opacity: 1;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(115deg, transparent 0%, transparent 30%, rgba(214, 185, 140, 0.2) 45%, rgba(214, 185, 140, 0.3) 50%, rgba(214, 185, 140, 0.2) 55%, transparent 70%, transparent 100%);
+    transform: rotate(35deg) translateX(-100%);
+    transition: transform 0.8s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-image:hover::after {
+    transform: rotate(35deg) translateX(100%);
 }
 
 .about-image .image-frame {
@@ -197,7 +418,7 @@ header.scrolled {
     bottom: 15px;
     border: 2px solid rgba(214, 185, 140, 0);
     border-radius: 16px;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease 0.1s;
     z-index: 3;
     pointer-events: none;
 }
@@ -208,6 +429,7 @@ header.scrolled {
     left: 20px;
     right: 20px;
     bottom: 20px;
+    box-shadow: 0 0 20px rgba(214, 185, 140, 0.3);
 }
 
 .about-image .image-caption {
@@ -215,11 +437,13 @@ header.scrolled {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(17, 17, 17, 0.95), transparent);
+    width: 100%;
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.98) 0%, rgba(17, 17, 17, 0.85) 40%, rgba(17, 17, 17, 0.6) 70%, transparent 100%);
     padding: 40px 30px 30px;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     z-index: 4;
+    backdrop-filter: blur(2px);
 }
 
 .about-image:hover .image-caption {
@@ -233,15 +457,83 @@ header.scrolled {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 2px;
+    margin-bottom: 8px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+    opacity: 0;
+}
+
+.about-image:hover .image-caption span {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .about-image .image-caption small {
     display: block;
     color: #F5EBDD;
     font-size: 14px;
+    line-height: 1.5;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s;
+    opacity: 0;
 }
 
-/* SCRUM-29: About Features Badges */
+.about-image:hover .image-caption small {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.about-content {
+    position: relative;
+    padding: 20px;
+    opacity: 0;
+    animation: slideInRight 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards 0.2s;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-60px); filter: blur(5px); }
+    to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(60px); filter: blur(5px); }
+    to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+.about-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #F5EBDD;
+    position: relative;
+    display: inline-block;
+}
+
+.about-content h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #D6B98C, #D6B98C, transparent);
+    transition: width 0.6s ease;
+}
+
+.about-content:hover h2::before {
+    width: 100%;
+}
+
+.about-content p {
+    color: #B8B8B8;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    transition: transform 0.4s ease;
+}
+
+.about-content p:hover {
+    transform: translateX(5px);
+}
+
 .about-features {
     display: flex;
     gap: 30px;
@@ -278,43 +570,12 @@ header.scrolled {
     transform: scale(1.1);
 }
 
-/* SCRUM-30: Features Grid */
+/* ========================================
+   EXPERIENCE / FEATURES SECTION
+   ======================================== */
 .experience {
     padding: 100px 0;
     background: #111111;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-tag {
-    display: inline-block;
-    color: #D6B98C;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 40px;
-}
-
-.section-tag::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 25px;
-    height: 1px;
-    background: #D6B98C;
-}
-
-.section-header h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #F5EBDD;
 }
 
 .features-grid {
@@ -332,6 +593,12 @@ header.scrolled {
     transition: all 0.3s;
 }
 
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #D6B98C;
+    background: rgba(59, 42, 36, 0.5);
+}
+
 .feature-icon {
     font-size: 48px;
     margin-bottom: 20px;
@@ -347,38 +614,26 @@ header.scrolled {
     color: #B8B8B8;
 }
 
-/* SCRUM-31: Hover Effects on Feature Cards */
-.feature-card {
-    text-align: center;
-    padding: 40px 30px;
-    background: rgba(59, 42, 36, 0.3);
-    border-radius: 16px;
-    border: 1px solid rgba(214, 185, 140, 0.1);
-    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    border-color: #D6B98C;
-    background: rgba(59, 42, 36, 0.5);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.feature-card:hover .feature-icon {
-    transform: scale(1.1);
-    display: inline-block;
-}
-
-.feature-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-/* SCRUM-32 & 33: Menu Section Layout */
+/* ========================================
+   MENU SECTION
+   ======================================== */
 .menu {
     padding: 100px 0;
     background: #1a1a1a;
+}
+
+.menu .section-header {
+    margin-bottom: 70px;
+}
+
+.menu .section-header h2 {
+    font-size: 52px;
+    color: #F5EBDD;
+}
+
+.menu .section-header p {
+    font-size: 18px;
+    color: #D6B98C;
 }
 
 .menu-grid {
@@ -398,19 +653,33 @@ header.scrolled {
     border: 1px solid rgba(214, 185, 140, 0.15);
 }
 
+.menu-item:hover {
+    background: rgba(59, 42, 36, 0.6);
+    transform: translateX(10px) translateY(-5px);
+    border-color: rgba(214, 185, 140, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
 .menu-item-image {
     width: 200px;
     height: 200px;
     border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
+    background: #3B2A24;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .menu-item-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item-image img {
+    transform: scale(1.05);
 }
 
 .menu-item-info {
@@ -422,12 +691,14 @@ header.scrolled {
     margin-bottom: 12px;
     color: #F5EBDD;
     font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
 }
 
 .menu-item-info p {
     color: #B8B8B8;
     font-size: 16px;
     margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .price {
@@ -438,38 +709,93 @@ header.scrolled {
     border-bottom: 2px solid #D6B98C;
     padding-bottom: 5px;
 }
-/* SCRUM-34: Hover Effects on Menu Items */
-.menu-item {
-    display: flex;
-    gap: 35px;
-    background: rgba(59, 42, 36, 0.4);
-    border-radius: 24px;
-    padding: 35px;
-    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    align-items: center;
-    border: 1px solid rgba(214, 185, 140, 0.15);
-}
 
-.menu-item:hover {
-    background: rgba(59, 42, 36, 0.6);
-    transform: translateX(10px) translateY(-5px);
-    border-color: rgba(214, 185, 140, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.menu-item:hover .menu-item-image img {
-    transform: scale(1.05);
-}
-
-.menu-item:hover .price {
-    color: #F5EBDD;
-    border-bottom-color: #F5EBDD;
-}
-
-/* SCRUM-35: Gallery Grid Layout */
+/* ========================================
+   GALLERY SECTION
+   ======================================== */
 .gallery {
     padding: 100px 0;
     background: #111111;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(214, 185, 140, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.gallery .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.gallery .section-header .section-tag {
+    display: inline-block;
+    color: #D6B98C;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 0px rgba(214, 185, 140, 0); }
+    50% { text-shadow: 0 0 10px rgba(214, 185, 140, 0.5); }
+}
+
+.gallery .section-header h2 {
+    font-size: 56px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #F5EBDD 0%, #D6B98C 50%, #F5EBDD 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shineText 3s linear infinite;
+}
+
+@keyframes shineText {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.gallery .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D6B98C, #D6B98C, transparent);
+    transition: width 0.4s ease;
+}
+
+.gallery .section-header:hover h2::after {
+    width: 150px;
+}
+
+.gallery .section-header p {
+    color: #B8B8B8;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .gallery-grid {
@@ -485,17 +811,31 @@ header.scrolled {
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    transform-origin: center;
     transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     border: 1px solid rgba(214, 185, 140, 0);
+    opacity: 0;
+    animation: cinematicReveal 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
 }
 
-.gallery-large {
-    grid-column: span 2;
-    grid-row: span 2;
+@keyframes cinematicReveal {
+    0% { opacity: 0; transform: translateY(60px) scale(0.9); filter: blur(5px); }
+    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
-.gallery-tall {
-    grid-row: span 2;
+.gallery-item:nth-child(1) { animation-delay: 0.05s; }
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.15s; }
+.gallery-item:nth-child(4) { animation-delay: 0.2s; }
+.gallery-item:nth-child(5) { animation-delay: 0.25s; }
+.gallery-item:nth-child(6) { animation-delay: 0.3s; }
+.gallery-item:nth-child(7) { animation-delay: 0.35s; }
+.gallery-item:nth-child(8) { animation-delay: 0.4s; }
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(214, 185, 140, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(214, 185, 140, 0.2);
 }
 
 .gallery-item img {
@@ -503,6 +843,48 @@ header.scrolled {
     height: 100%;
     object-fit: cover;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.95) saturate(1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.12);
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(214, 185, 140, 0) 0%, rgba(214, 185, 140, 0.1) 25%, rgba(214, 185, 140, 0.2) 50%, rgba(214, 185, 140, 0.1) 75%, rgba(214, 185, 140, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(115deg, transparent 0%, transparent 40%, rgba(214, 185, 140, 0.15) 50%, transparent 60%, transparent 100%);
+    transform: rotate(25deg) translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    transform: rotate(25deg) translateX(50%);
 }
 
 .gallery-item .image-overlay {
@@ -510,7 +892,7 @@ header.scrolled {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(17, 17, 17, 0.9), transparent);
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.5) 50%, transparent 100%);
     padding: 30px 20px 20px;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -528,6 +910,14 @@ header.scrolled {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+    opacity: 0;
+}
+
+.gallery-item:hover .image-overlay span {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .gallery-item .image-overlay small {
@@ -535,165 +925,29 @@ header.scrolled {
     color: #D6B98C;
     font-size: 12px;
     margin-top: 5px;
-}
-/* SCRUM-36: Enhanced Gallery Hover Effects */
-.gallery-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: rgba(214, 185, 140, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-.gallery-item:hover img {
-    transform: scale(1.12);
-    filter: brightness(1.05);
-}
-
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(214, 185, 140, 0.2), transparent);
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s;
     opacity: 0;
-    transition: opacity 0.6s ease;
-    z-index: 2;
-    pointer-events: none;
 }
 
-.gallery-item:hover::before {
+.gallery-item:hover .image-overlay small {
+    transform: translateY(0);
     opacity: 1;
 }
-/* SCRUM-50 & 51: Testimonials Section */
-.testimonials {
-    padding: 100px 0;
-    background: #111111;
+
+.gallery-large {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.gallery-tall {
+    grid-row: span 2;
+    height: auto;
 }
 
-.testimonial-card {
-    background: rgba(59, 42, 36, 0.3);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(214, 185, 140, 0.1);
-    transition: all 0.3s;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    border-color: #D6B98C;
-}
-
-.testimonial-card p {
-    font-style: italic;
-    margin-bottom: 20px;
-    color: #F5EBDD;
-    line-height: 1.6;
-}
-
-.testimonial-author strong {
-    display: block;
-    font-size: 14px;
-    color: #D6B98C;
-}
-
-.testimonial-author span {
-    font-size: 12px;
-    color: #B8B8B8;
-}
-/* SCRUM-52, 53, 54: Footer Styles */
-footer {
-    background: #0a0a0a;
-    padding: 60px 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.footer-section h4 {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #D6B98C;
-    letter-spacing: 1px;
-}
-
-.footer-section p {
-    color: #B8B8B8;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.footer-contact {
-    margin-top: 10px;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.social-links a {
-    color: #B8B8B8;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #D6B98C;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(214, 185, 140, 0.1);
-    font-size: 12px;
-    color: #666;
-}
-/* SCRUM-54: Responsive Footer */
-@media (max-width: 968px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-}
-
-@media (max-width: 550px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 25px;
-    }
-    
-    .social-links {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .footer-bottom {
-        font-size: 10px;
-    }
-}
-/* SCRUM-38: Reservation Form Styling */
+/* ========================================
+   RESERVATION SECTION
+   ======================================== */
 .reservation {
     padding: 100px 0;
     background: #1a1a1a;
@@ -734,6 +988,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
 }
 
 .reservation-form .form-group {
@@ -791,17 +1046,205 @@ footer {
     transform: translateY(-2px);
 }
 
-.error-messages {
-    background: rgba(220, 53, 69, 0.2);
-    border: 1px solid #dc3545;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
 .error {
-    color: #dc3545;
+    color: #e74c3c;
     font-size: 12px;
     display: block;
     margin-top: 5px;
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+.testimonials {
+    padding: 100px 0;
+    background: #111111;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: rgba(59, 42, 36, 0.3);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(214, 185, 140, 0.1);
+    transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: #D6B98C;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #D6B98C;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 14px;
+    color: #F5EBDD;
+}
+
+.testimonial-author span {
+    font-size: 12px;
+    color: #B8B8B8;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    background: #0a0a0a;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #D6B98C;
+}
+
+.footer-section p {
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-contact {
+    margin-top: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #B8B8B8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #D6B98C;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(214, 185, 140, 0.1);
+    font-size: 12px;
+    color: #666;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 968px) {
+    nav, .btn-reserve-header {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-tagline {
+        font-size: 18px;
+    }
+    
+    .about-grid,
+    .features-grid,
+    .testimonials-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        height: 350px;
+    }
+    
+    .about-image .image-frame {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .about-features {
+        flex-direction: column;
+    }
+    
+    .about-content h2 {
+        font-size: 32px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-item-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+    
+    .gallery-large,
+    .gallery-tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .gallery .section-header h2 {
+        font-size: 36px;
+    }
+    
+    .reservation-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .reservation-image {
+        min-height: 400px;
+        order: -1;
+    }
+    
+    .reservation-form .form-row {
+        grid-template-columns: 1fr;
+    }
 }
