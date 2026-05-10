@@ -29,6 +29,24 @@
             <button class="btn-reserve-header">Reserve Table</button>
             <div class="mobile-menu-btn">☰</div>
         </div>
+            <!-- SCRUM-22: Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">London's Hidden Midnight Café</span>
+            <h1 class="hero-title">ASTER CAFÉ</h1>
+            <p class="hero-tagline">"Where silence tastes like coffee."</p>
+            <p class="hero-description">A hidden midnight café in London designed for dreamers, readers, and quiet souls.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Reserve a Table</button>
+                <button class="btn-secondary">Explore Menu</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
     </header>
 
     <!-- Rest of the content will be added in other tasks -->
