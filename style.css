@@ -240,3 +240,40 @@ header.scrolled {
     color: #F5EBDD;
     font-size: 14px;
 }
+
+/* SCRUM-29: About Features Badges */
+.about-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.about-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #D6B98C;
+    padding: 15px 20px;
+    background: rgba(59, 42, 36, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex: 1;
+}
+
+.about-feature:hover {
+    background: rgba(59, 42, 36, 0.6);
+    transform: translateY(-5px);
+    color: #F5EBDD;
+}
+
+.about-feature span:first-child {
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.about-feature:hover span:first-child {
+    transform: scale(1.1);
+}

@@ -67,6 +67,21 @@
                 </div>
             </div>
         </div>
+
+                            <div class="about-features">
+                        <div class="about-feature">
+                            <span>🌙</span>
+                            <span>Open till 2 AM</span>
+                        </div>
+                        <div class="about-feature">
+                            <span>📖</span>
+                            <span>Reading Library</span>
+                        </div>
+                        <div class="about-feature">
+                            <span>🎷</span>
+                            <span>Live Jazz</span>
+                        </div>
+                    </div>
     </section>
     </section>
     </header>
