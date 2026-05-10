@@ -607,3 +607,64 @@ header.scrolled {
     font-size: 12px;
     color: #B8B8B8;
 }
+/* SCRUM-52, 53, 54: Footer Styles */
+footer {
+    background: #0a0a0a;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #D6B98C;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-contact {
+    margin-top: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #B8B8B8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #D6B98C;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(214, 185, 140, 0.1);
+    font-size: 12px;
+    color: #666;
+}

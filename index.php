@@ -246,6 +246,44 @@
                 </div>
             </div>
         </div>
+            <!-- SCRUM-52 & 53 & 54: Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span>☕</span>
+                        <span>ASTER CAFÉ</span>
+                    </div>
+                    <p>Coffee. Silence. Stories.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Visit Us</h4>
+                    <p>18 Kensington Lane,<br>London, UK</p>
+                    <p class="footer-contact">hello@astercafe.co.uk<br>+44 20 7946 2180</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Monday - Friday: 4 PM - 2 AM<br>Saturday - Sunday: 12 PM - 2 AM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Developed by Maryam & Radia</p>
+                <p>© 2026 Aster Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     </section>
     </section>
     </section>
