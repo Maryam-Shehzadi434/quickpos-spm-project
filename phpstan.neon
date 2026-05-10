@@ -1,0 +1,7 @@
+parameters:
+    level: 1
+    paths:
+        - tests
+    excludePaths:
+        - vendor
+    reportUnmatchedIgnoredErrors: false
