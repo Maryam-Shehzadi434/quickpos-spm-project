@@ -300,6 +300,7 @@
     <!-- [SCRUM-35] Add gallery grid layout Requirment Satisfied -->
     <!-- [SCRUM-36] Add enhanced gallery hover effects Requirment Satisfied -->
     <!-- [SCRUM-50] Add testimonials section Requirment Satisfied -->
+    <!-- [SCRUM-52, 53] Add footer styles Requirment Satisfied -->
 
 </body>
 </html>
