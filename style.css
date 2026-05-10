@@ -1,0 +1,51 @@
+/* SCRUM-20: Mobile Hamburger Menu */
+.mobile-menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #F5EBDD;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #111111;
+        padding: 20px;
+        border-bottom: 1px solid #D6B98C;
+    }
+    
+    nav.active ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* SCRUM-21: Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+header.scrolled {
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(214, 185, 140, 0.2);
+}
