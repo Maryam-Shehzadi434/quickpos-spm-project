@@ -109,6 +109,58 @@
                 </div>
             </div>
         </div>
+            <!-- SCRUM-32 & 33: Signature Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Signature Menu</span>
+                <h2>Handcrafted for You</h2>
+                <p>Our most beloved creations</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Midnight Mocha">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Midnight Mocha</h4>
+                        <p>Dark chocolate, espresso, steamed milk</p>
+                        <span class="price">£8</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400" alt="Vanilla Latte">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Vanilla Latte</h4>
+                        <p>Madagascar vanilla, smooth espresso</p>
+                        <span class="price">£7</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="Caramel Espresso">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Caramel Espresso</h4>
+                        <p>House-made caramel, double shot</p>
+                        <span class="price">£6</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=400" alt="Cinnamon Cheesecake">
+                    </div>
+                    <div class="menu-item-info">
+                        <h4>Cinnamon Cheesecake</h4>
+                        <p>New York style with cinnamon dust</p>
+                        <span class="price">£10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     </section>
     </section>
