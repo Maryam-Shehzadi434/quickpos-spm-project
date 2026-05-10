@@ -826,3 +826,26 @@ footer {
         gap: 20px;
     }
 }
+echo '
+/* SCRUM-54: Responsive Footer */
+@media (max-width: 968px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+@media (max-width: 550px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}' >> style.css
+
+git add style.css
+git commit -m "[SCRUM-54] Make footer responsive on mobile"
+git push origin SCRUM-16-testing-skeleton
