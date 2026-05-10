@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// SCRUM-39: Skeleton validation (TDD - will fail initially)
 // Get form data
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
@@ -11,18 +10,45 @@ $special_request = trim($_POST['special_request'] ?? '');
 
 $errors = [];
 
-// SKELETON: No validation yet - tests will fail
-// Full validation will be added in SCRUM-40 to SCRUM-45
+// SCRUM-40: Validate name
+if (empty($name)) {
+    $errors['name'] = "Name is required";
+}
 
-// If validation fails, redirect back to form with errors
+// SCRUM-41 & 42: Validate email
+if (empty($email)) {
+    $errors['email'] = "Email is required";
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors['email'] = "Invalid email format";
+}
+
+// SCRUM-43: Validate date
+if (empty($date)) {
+    $errors['date'] = "Reservation date is required";
+}
+
+// SCRUM-44: Validate guests
+if (empty($guests)) {
+    $errors['guests'] = "Number of guests is required";
+}
+
+// SCRUM-45 & 46: If errors, redirect back with data
 if (!empty($errors)) {
     $_SESSION['form_errors'] = $errors;
-    $_SESSION['form_data'] = ['name' => $name, 'email' => $email, 'date' => $date, 'guests' => $guests, 'special_request' => $special_request];
+    $_SESSION['form_data'] = [
+        'name' => $name,
+        'email' => $email,
+        'date' => $date,
+        'guests' => $guests,
+        'special_request' => $special_request
+    ];
     header('Location: index.php#reservation');
     exit();
 }
 
-// If validation passes, show thank you page
+// SCRUM-47: Create thank-you.php page
+// SCRUM-48: Redirect on success
+// SCRUM-49: XSS protection via htmlspecialchars
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +74,7 @@ if (!empty($errors)) {
         </div>
         <div class="confirmation-message">
             <p>A confirmation email has been sent to <strong><?php echo htmlspecialchars($email); ?></strong></p>
+            <p>We look forward to serving you on <strong><?php echo htmlspecialchars($date); ?></strong> for <strong><?php echo htmlspecialchars($guests); ?></strong> guest(s).</p>
         </div>
         <a href="index.php" class="back-home">← Back to Aster Café</a>
     </div>
