@@ -49,3 +49,31 @@ header.scrolled {
     padding: 12px 0;
     border-bottom: 1px solid rgba(214, 185, 140, 0.2);
 }
+/* SCRUM-23: Hero Background with Slow Zoom */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=1600');
+    background-size: cover;
+    background-position: center;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
