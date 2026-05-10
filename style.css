@@ -844,8 +844,4 @@ echo '
         justify-content: center;
         gap: 20px;
     }
-}' >> style.css
-
-git add style.css
-git commit -m "[SCRUM-54] Make footer responsive on mobile"
-git push origin SCRUM-16-testing-skeleton
+}
