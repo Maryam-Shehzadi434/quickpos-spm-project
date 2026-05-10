@@ -31,3 +31,21 @@
         gap: 15px;
     }
 }
+
+/* SCRUM-21: Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+header.scrolled {
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(214, 185, 140, 0.2);
+}
