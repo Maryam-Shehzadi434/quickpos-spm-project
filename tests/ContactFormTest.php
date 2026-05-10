@@ -34,3 +34,22 @@ class ContactFormTest extends TestCase
         return [];
     }
 }
+
+    /**
+     * SCRUM-57: Skeleton test for empty email
+     * This test will FAIL initially (TDD approach)
+     */
+    public function testEmptyEmailField()
+    {
+        $_POST = [
+            'name' => 'John Doe',
+            'email' => '',
+            'date' => '2026-12-25',
+            'guests' => '2'
+        ];
+        
+        $errors = $this->validateForm($_POST);
+        
+        // Assert: This will fail initially because validation not implemented
+        $this->assertArrayHasKey('email', $errors, 'Email validation should catch empty field');
+    }
