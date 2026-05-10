@@ -46,6 +46,71 @@
             <span>Scroll</span>
             <div class="scroll-line"></div>
         </div>
+
+            <!-- SCRUM-27: About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Cozy Café Interior">
+                    <div class="image-frame"></div>
+                    <div class="image-caption">
+                        <span>Sanctuary in the City</span>
+                        <small>Where every corner tells a story</small>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>An Escape From the Noise</h2>
+                    <p>Aster Café was created as a sanctuary for meaningful conversations, slow evenings, and handcrafted coffee experiences in the heart of London.</p>
+                    <p>Tucked away on Kensington Lane, our doors open to those seeking refuge from the chaotic city pace. Here, every cup tells a story, every corner holds a secret, and every evening unfolds like poetry.</p>
+                </div>
+            </div>
+        </div>
+
+                            <div class="about-features">
+                        <div class="about-feature">
+                            <span>🌙</span>
+                            <span>Open till 2 AM</span>
+                        </div>
+                        <div class="about-feature">
+                            <span>📖</span>
+                            <span>Reading Library</span>
+                        </div>
+                        <div class="about-feature">
+                            <span>🎷</span>
+                            <span>Live Jazz</span>
+                        </div>
+                    </div>
+
+                        <!-- SCRUM-30: Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Experience</span>
+                <h2>More Than Just Coffee</h2>
+                <p>Step into a world where every detail is crafted for your comfort</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">☕</div>
+                    <h3>Quiet Atmosphere</h3>
+                    <p>Soft jazz, warm lights, peaceful evenings away from the city rush.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍵</div>
+                    <h3>Artisan Coffee</h3>
+                    <p>Freshly roasted blends crafted with precision by master baristas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Reading Corners</h3>
+                    <p>Private spaces for books, work, and quiet reflection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
     </section>
     </header>
 

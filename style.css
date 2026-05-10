@@ -161,3 +161,217 @@ header.scrolled {
     0%, 100% { height: 40px; opacity: 0.5; }
     50% { height: 60px; opacity: 1; }
 }
+/* SCRUM-28: About Image with Hover Effects */
+.about-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.about-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+}
+
+.about-image .image-frame {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid rgba(214, 185, 140, 0);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.about-image:hover .image-frame {
+    border-color: rgba(214, 185, 140, 0.6);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+}
+
+.about-image .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.95), transparent);
+    padding: 40px 30px 30px;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    z-index: 4;
+}
+
+.about-image:hover .image-caption {
+    transform: translateY(0);
+}
+
+.about-image .image-caption span {
+    display: block;
+    color: #D6B98C;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.about-image .image-caption small {
+    display: block;
+    color: #F5EBDD;
+    font-size: 14px;
+}
+
+/* SCRUM-29: About Features Badges */
+.about-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.about-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #D6B98C;
+    padding: 15px 20px;
+    background: rgba(59, 42, 36, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex: 1;
+}
+
+.about-feature:hover {
+    background: rgba(59, 42, 36, 0.6);
+    transform: translateY(-5px);
+    color: #F5EBDD;
+}
+
+.about-feature span:first-child {
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.about-feature:hover span:first-child {
+    transform: scale(1.1);
+}
+
+/* SCRUM-30: Features Grid */
+.experience {
+    padding: 100px 0;
+    background: #111111;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #D6B98C;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.section-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background: #D6B98C;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(59, 42, 36, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(214, 185, 140, 0.1);
+    transition: all 0.3s;
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #F5EBDD;
+}
+
+.feature-card p {
+    color: #B8B8B8;
+}
+
+/* SCRUM-31: Hover Effects on Feature Cards */
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(59, 42, 36, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(214, 185, 140, 0.1);
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #D6B98C;
+    background: rgba(59, 42, 36, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
