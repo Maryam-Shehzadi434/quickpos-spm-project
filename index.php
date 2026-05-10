@@ -215,6 +215,74 @@
             </div>
         </div>
 
+
+            <!-- SCRUM-37 & 38: Reservation Form Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation-card">
+                <div class="reservation-content">
+                    <span class="section-tag">Reserve Your Evening</span>
+                    <h2>Claim Your Corner</h2>
+                    <p>Limited tables available for the perfect quiet evening</p>
+                    
+                    <?php if (isset($_SESSION['form_errors']) && !empty($_SESSION['form_errors'])): ?>
+                        <div class="error-messages">
+                            <?php foreach ($_SESSION['form_errors'] as $field => $error): ?>
+                                <p class="error">⚠️ <?php echo htmlspecialchars($error); ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php unset($_SESSION['form_errors']); ?>
+                    <?php endif; ?>
+                    
+                    <form method="POST" action="thank-you.php" class="reservation-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($_SESSION['form_data']['name'] ?? ''); ?>">
+                            <span class="error" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($_SESSION['form_data']['email'] ?? ''); ?>">
+                            <span class="error" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Reservation Date *</label>
+                                <input type="date" id="date" name="date" value="<?php echo htmlspecialchars($_SESSION['form_data']['date'] ?? ''); ?>">
+                                <span class="error" id="date-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" name="guests">
+                                    <option value="">Select</option>
+                                    <option value="1" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '1') ? 'selected' : ''; ?>>1 Guest</option>
+                                    <option value="2" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '2') ? 'selected' : ''; ?>>2 Guests</option>
+                                    <option value="3" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '3') ? 'selected' : ''; ?>>3 Guests</option>
+                                    <option value="4" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '4') ? 'selected' : ''; ?>>4 Guests</option>
+                                    <option value="5" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '5') ? 'selected' : ''; ?>>5 Guests</option>
+                                    <option value="6" <?php echo (($_SESSION['form_data']['guests'] ?? '') == '6') ? 'selected' : ''; ?>>6+ Guests</option>
+                                </select>
+                                <span class="error" id="guests-error"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special_request">Special Request (Optional)</label>
+                            <textarea id="special_request" name="special_request" rows="3"><?php echo htmlspecialchars($_SESSION['form_data']['special_request'] ?? ''); ?></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Reserve Table →</button>
+                    </form>
+                </div>
+                <div class="reservation-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800" alt="Cozy Corner at Aster Café">
+                </div>
+            </div>
+        </div>
+    </section>
             <!-- SCRUM-50 & 51: Testimonials Section -->
     <section class="testimonials">
         <div class="container">
