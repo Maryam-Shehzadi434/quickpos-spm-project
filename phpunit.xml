@@ -2,10 +2,16 @@
 <phpunit bootstrap="vendor/autoload.php"
          colors="true"
          testdox="true"
-         stopOnFailure="false">
+         stopOnFailure="false"
+         timeoutForSmallTests="1"
+         cacheResultFile=".phpunit.result.cache">
     <testsuites>
         <testsuite name="Aster Café Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <ini name="error_reporting" value="E_ALL"/>
+        <ini name="display_errors" value="1"/>
+    </php>
 </phpunit>

@@ -1,8 +1,40 @@
+# Composer
 /vendor/
 composer.lock
+
+# PHPUnit
 .phpunit.result.cache
+.phpunit.cache/
+test-report.txt
+
+# Logs
+*.log
+error_log
+
+# OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# IDE files
 .idea/
 .vscode/
-*.log
+*.sublime-*
+
+# Environment
+.env
+.env.local
+
+# Uploaded images (keep structure but ignore actual images)
+relaximage1.jpg
+Coffee Bar.jpg
+Jazz Night.jpg
+gallery.png
+Window View.jpg
+woman drinking.jpg
+writers-scene-concept.jpg
+MidnightMocha.png
+VanillaLatte.png
+CaramelEspresso.png
+CinnamonCheesecake.png
+AsterCafe.jpg
