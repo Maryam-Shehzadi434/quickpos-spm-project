@@ -4,33 +4,33 @@ use PHPUnit\Framework\TestCase;
 
 class ContactFormTest extends TestCase
 {
-    // // Test 1: Empty name field
-    // public function testEmptyNameField()
-    // {
-    //     $errors = $this->validateForm([
-    //         'name' => '',
-    //         'email' => 'test@example.com',
-    //         'date' => '2026-12-25',
-    //         'guests' => '2'
-    //     ]);
+    // Test 1: Empty name field
+    public function testEmptyNameField()
+    {
+        $errors = $this->validateForm([
+            'name' => '',
+            'email' => 'test@example.com',
+            'date' => '2026-12-25',
+            'guests' => '2'
+        ]);
         
-    //     $this->assertArrayHasKey('name', $errors);
-    //     $this->assertEquals('Name is required', $errors['name']);
-    // }
+        $this->assertArrayHasKey('name', $errors);
+        $this->assertEquals('Name is required', $errors['name']);
+    }
 
-    // Test 1: Empty name field FAilure 
-public function testEmptyNameField()
-{
-    $errors = $this->validateForm([
-        'name' => '',
-        'email' => 'test@example.com',
-        'date' => '2026-12-25',
-        'guests' => '2'
-    ]);
+//     // Test 1: Empty name field FAilure 
+// public function testEmptyNameField()
+// {
+//     $errors = $this->validateForm([
+//         'name' => '',
+//         'email' => 'test@example.com',
+//         'date' => '2026-12-25',
+//         'guests' => '2'
+//     ]);
     
-    $this->assertArrayHasKey('name', $errors);
-    $this->assertEquals('Wrong error message', $errors['name']);
-}
+//     $this->assertArrayHasKey('name', $errors);
+//     $this->assertEquals('Wrong error message', $errors['name']);
+// }
 
     // Test 2: Empty email field
     public function testEmptyEmailField()
