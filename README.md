@@ -1,7 +1,5 @@
 # QuickPOS Landing Page
 
-[![CI Pipeline](https://github.com/YOUR_USERNAME/quickpos-spm-project/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/quickpos-spm-project/actions/workflows/ci.yml)
-
 ## Project Overview
 
 QuickPOS is a modern, responsive landing page for a Point of Sale system. This project demonstrates professional software development practices including:
