@@ -163,7 +163,7 @@ class ContactFormTest extends TestCase
         }
     }
 
-    // Validation logic matching-index.php
+    // Validation logic matching index.php
     private function validateForm($data)
     {
         $errors = [];
