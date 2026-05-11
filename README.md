@@ -19,6 +19,17 @@ QuickPOS is a modern, responsive landing page for a Point of Sale system. This p
 - PHPUnit 10.5+ (Testing)
 - GitHub Actions (CI/CD)
 
+## Live Deployment
+
+The project is successfully deployed and live at:  
+🔗 **[https://astercafe.infinityfreeapp.com/](https://astercafe.infinityfreeapp.com/)**
+
+The live site includes:
+- Fully responsive design
+- Working reservation form with PHP validation
+- Interactive gallery with hover effects
+- Mobile-friendly navigation
+
 ## Local Setup
 
 ### Prerequisites
@@ -26,3 +37,8 @@ QuickPOS is a modern, responsive landing page for a Point of Sale system. This p
 - PHP 8.2 or higher
 - Composer
 
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Maryam-Shehzadi434/quickpos-spm-project.git
