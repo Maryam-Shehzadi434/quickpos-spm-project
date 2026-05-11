@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class ContactFormTest extends TestCase
 {
-    // Test 1: Empty name field
+    // Test 1: Empty nameField
     public function testEmptyNameField()
     {
         $errors = $this->validateForm([
