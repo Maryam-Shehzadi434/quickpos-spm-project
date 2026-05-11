@@ -263,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="woman drinking.jpg" alt="Woman Drinking Coffee">
+                <img src="woman-drinking.jpg" alt="Woman Drinking Coffee">
                 <div class="image-overlay">
                     <span>Quiet Moments</span>
                     <small>Peaceful Sips</small>
